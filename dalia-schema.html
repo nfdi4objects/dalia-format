@@ -1,0 +1,383 @@
+<html>
+<head>
+<style type="text/css">
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+table {
+  border-collapse: collapse;
+  border-color: gray;  
+  border: 1px solid #C1C7D0;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+td, th {
+  border: 1px solid #C1C7D0;
+  vertical-align: top;
+  padding: 4px;
+}
+th {
+  background-color: #F4F5F7;
+  text-align: left;
+}
+.help {
+  font-weight: default;
+  font-size: 80%;
+  vertical-align: super;
+}
+</style>
+</head>
+
+<body>
+  <h1>DALIA Interchange Format</h1>
+  <p>Unofficial Data Literacy Alliance Data Schema</p>
+  
+  <p><a href="https://github.com/nfdi4objects/dalia-format">https://github.com/nfdi4objects/dalia-format</a></p>
+  <p>
+    This document has been generated from an
+    <a href="https://format.gbv.de/schema/avram/specification">Avram Schema</a>.
+    
+      <a href="dalia-schema.json">download</a>
+    
+  </p>
+  <ul>
+    <li><a href="#fields">Fields</a></li>
+    
+    
+  </ul>
+  
+  <h2 id="fields">Fields</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th></th>
+        
+        
+        <th>Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td><b>
+            Authors
+          </b></td>
+          <td><tt>1..*</tt></td>
+          
+          
+          <td>
+            <b>Authors</b>
+            <br>Name of the person(s) or organization(s) who created (write, make, present, ...) the resource. If unknown, then write n/a.
+          </td>
+          <td>
+  
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            Community
+          </b></td>
+          <td><tt>0..*</tt></td>
+          
+          
+          <td>
+            <b>Community</b>
+            <br>Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. The community is the institution or project or body or online community which supports the training or administration of the OER.
+          </td>
+          <td>
+  
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            Description
+          </b></td>
+          <td><tt>0..1</tt></td>
+          
+          
+          <td>
+            <b>Description</b>
+            <br>description of the resource
+          </td>
+          <td>
+  
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            Discipline
+          </b></td>
+          <td><tt>0..*</tt></td>
+          
+          
+          <td>
+            <b>Discipline</b>
+            <br>the discipline or university/college subject the learning resource belongs to
+          </td>
+          <td>
+  
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            FileFormat
+          </b></td>
+          <td><tt>0..*</tt></td>
+          
+          
+          <td>
+            <b>FileFormat</b>
+            <br>The (technical) file format, physical medium, or dimensions of the resource. If the resource exists in different formats (e.g. pptx and pdf), all of them should be provided. For non-downloadable resources, e.g. streams, no format can be provided (e.g. YouTube videos).
+          </td>
+          <td>
+  
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            Keywords
+          </b></td>
+          <td><tt>0..*</tt></td>
+          
+          
+          <td>
+            <b>Keywords</b>
+            <br>essential and characteristic topics or content of the resource
+          </td>
+          <td>
+  
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            Language
+          </b></td>
+          <td><tt>0..*</tt></td>
+          
+          
+          <td>
+            <b>Language</b>
+            <br>essential and characteristic topics or content of the resource
+          </td>
+          <td>
+  
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            LearningResourceType 
+          </b></td>
+          <td><tt>0..*</tt></td>
+          
+          
+          <td>
+            <b>LearningResourceType</b>
+            <br>The pedagogical type of the resource: information for the educational use. This includes the mos
+          </td>
+          <td>
+  <code>bibo:Article</code><br><code>bibo:Book,</code><br><code>bibo:Report</code><br><code>bibo:Webpage</code><br><code>bibo:Thesis</code><br><code>hcrt:diagram</code><br><code>hcrt:educational_game</code><br><code>hcrt:case_study</code><br><code>hcrt:Experimentmo:Poster</code><br><code>mo:Lecture</code><br><code>mo:Tutorial</code><br><code>mo:JupyterNotebook</code><br><code>mo:Best-Practices</code><br>
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            License
+          </b></td>
+          <td><tt>1</tt></td>
+          
+          
+          <td>
+            <b>License</b>
+            <br>an object that links to a license
+          </td>
+          <td>pattern: <code>^[A-Za-z0-9.-]+$</code><br>
+  
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            Link
+          </b></td>
+          <td><tt>1..*</tt></td>
+          
+          
+          <td>
+            <b>Link</b>
+            <br>the hyperlink of the original resource
+          </td>
+          <td>
+  
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            MediaType
+          </b></td>
+          <td><tt>0..*</tt></td>
+          
+          
+          <td>
+            <b>MediaType</b>
+            <br>General type of data content encoded in a computer file. Digital media type of the resource. If the resource consists of more than one item with different DOIs, the MediaType is multipart and the relations are provided in the field RelatedWork. If the media type should be physical (CD-ROM, audiotape, etc.), choose from https://ceds.ed.gov/element/001401.
+          </td>
+          <td>
+  <code>audio</code><br><code>video,</code><br><code>presentation</code><br><code>code</code><br><code>image</code><br><code>multipart</code><br>
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            ProficiencyLevel
+          </b></td>
+          <td><tt>0..*</tt></td>
+          
+          
+          <td>
+            <b>ProficiencyLevel</b>
+            <br>the proposed level of proficiency of the learners in regard to the learning content
+          </td>
+          <td>
+  <code>novice</code><br><code>advanced beginner,</code><br><code>competent</code><br><code>proficient</code><br><code>expert</code><br>
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            PublicationDate
+          </b></td>
+          <td><tt>0..1</tt></td>
+          
+          
+          <td>
+            <b>PublicationDate</b>
+            <br>publication date of the resource
+          </td>
+          <td>pattern: <code>^[0-9]{4}(-[0-9][0-9](-[0-9][0-9](T[0-9][0-9]:[0-9][0-9](:[0-9][0-9])?(\.[0-9]+)?(([+-][0-9][0-9]:[0-9][0-9])|Z)?)?)?)?$</code><br>
+  
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            RelatedWork
+          </b></td>
+          <td><tt>0..*</tt></td>
+          
+          
+          <td>
+            <b>RelatedWork</b>
+            <br>The didactic relations to other learning resources: isPartOf, hasPart, or isBased on (prerequisite), isSupplementOf, isSupplementTo, isNewerVersionOf. Please provide the links of these resources.
+          </td>
+          <td>pattern: <code>^(isPartOf|hasPart|isBased|isSupplementOf|isSupplementTo|isNewerVersionOf):https?://+</code><br>
+  
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            Size
+          </b></td>
+          <td><tt>0..1</tt></td>
+          
+          
+          <td>
+            <b>Size</b>
+            <br>size of the resource in megabyte
+          </td>
+          <td>pattern: <code>^[0-9]+(\.[0-9]+)$</code><br>
+  
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            TargetGroup
+          </b></td>
+          <td><tt>0..*</tt></td>
+          
+          
+          <td>
+            <b>TargetGroup</b>
+            <br>Refers to learning resource and learners: A class of agents for whom the learning resource is intended or useful.
+          </td>
+          <td>
+  <code>student (school)</code><br><code>student (BA),</code><br><code>student (MA)</code><br><code>student (PhD)</code><br><code>data steward</code><br><code>teacher (school)</code><br><code>teacher (higher education)</code><br>
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            Title
+          </b></td>
+          <td><tt>1</tt></td>
+          
+          
+          <td>
+            <b>Title</b>
+            <br>title (and subtitle) of the resource
+          </td>
+          <td>
+  
+  </td>
+        </tr>
+        
+      
+        <tr>
+          <td><b>
+            Version
+          </b></td>
+          <td><tt>0..1</tt></td>
+          
+          
+          <td>
+            <b>Version</b>
+            <br>the version of the learning resource
+          </td>
+          <td>
+  
+  </td>
+        </tr>
+        
+      
+    </tbody>
+  </table>
+
+
+
+
+
+</body>
+</html>
+

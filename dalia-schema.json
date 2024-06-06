@@ -1,0 +1,160 @@
+{
+  "title": "DALIA Interchange Format",
+  "description": "Unofficial Data Literacy Alliance Data Schema", 
+  "url": "https://github.com/nfdi4objects/dalia-format",
+  "language": "en",
+  "$schema": "https://format.gbv.de/schema/avram/schema.json",
+  "fields": {
+    "Authors": {
+      "label": "Authors",
+      "required": true,
+      "repeatable": true,
+      "description": "Name of the person(s) or organization(s) who created (write, make, present, ...) the resource. If unknown, then write n/a."
+    },
+    "License": {
+      "label": "License",
+      "required": true,
+      "repeatable": false,
+      "description": "an object that links to a license",
+      "pattern": "^[A-Za-z0-9.-]+$"
+    },
+    "Link": {
+      "label": "Link",
+      "required": true,
+      "repeatable": true,
+      "description": "the hyperlink of the original resource"
+    },
+    "Title": {
+      "label": "Title",
+      "required": true,
+      "repeatable": false,
+      "description": "title (and subtitle) of the resource"
+    },
+    "Community": {
+      "label": "Community",
+      "required": false,
+      "repeatable": true,
+      "description": "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. The community is the institution or project or body or online community which supports the training or administration of the OER."
+    },
+    "Description": {
+      "label": "Description",
+      "required": false,
+      "repeatable": false,
+      "description": "description of the resource"
+    },
+    "Discipline": {
+      "label": "Discipline",
+      "required": false,
+      "repeatable": true,
+      "description": "the discipline or university/college subject the learning resource belongs to"
+    },
+    "FileFormat": {
+      "label": "FileFormat",
+      "required": false,
+      "repeatable": true,
+      "description": "The (technical) file format, physical medium, or dimensions of the resource. If the resource exists in different formats (e.g. pptx and pdf), all of them should be provided. For non-downloadable resources, e.g. streams, no format can be provided (e.g. YouTube videos)."
+    },
+    "Keywords": {
+      "label": "Keywords",
+      "required": false,
+      "repeatable": true,
+      "description": "essential and characteristic topics or content of the resource"
+    },
+    "Language": {
+      "label": "Language",
+      "required": false,
+      "repeatable": true,
+      "description": "essential and characteristic topics or content of the resource"
+    },
+    "LearningResourceType ": {
+      "label": "LearningResourceType",
+      "required": false,
+      "repeatable": true,
+      "description": "The pedagogical type of the resource: information for the educational use. This includes the mos",
+      "codes": {
+        "bibo:Article": {},
+        "bibo:Book,": {},
+        "bibo:Report": {},
+        "bibo:Webpage": {},
+        "bibo:Thesis": {},
+        "hcrt:diagram": {},
+        "hcrt:educational_game": {},
+        "hcrt:case_study": {},
+        "hcrt:Experimentmo:Poster": {},
+        "mo:Lecture": {},
+        "mo:Tutorial": {},
+        "mo:JupyterNotebook": {},
+        "mo:Best-Practices": {}
+      }
+    },
+    "MediaType": {
+      "label": "MediaType",
+      "required": false,
+      "repeatable": true,
+      "description": "General type of data content encoded in a computer file. Digital media type of the resource. If the resource consists of more than one item with different DOIs, the MediaType is multipart and the relations are provided in the field RelatedWork. If the media type should be physical (CD-ROM, audiotape, etc.), choose from https://ceds.ed.gov/element/001401.",
+      "codes": {
+        "audio": {},
+        "video,": {},
+        "presentation": {},
+        "code": {},
+        "image": {},
+        "multipart": {}
+      }
+    },
+    "ProficiencyLevel": {
+      "label": "ProficiencyLevel",
+      "required": false,
+      "repeatable": true,
+      "description": "the proposed level of proficiency of the learners in regard to the learning content",
+      "codes": {
+        "novice": {},
+        "advanced beginner": {},
+        "competent": {},
+        "proficient": {},
+        "expert": {}
+      }
+    },
+    "PublicationDate": {
+      "label": "PublicationDate",
+      "required": false,
+      "repeatable": false,
+      "description": "publication date of the resource",
+      "pattern": "^[0-9]{4}(-[0-9][0-9](-[0-9][0-9](T[0-9][0-9]:[0-9][0-9](:[0-9][0-9])?(\\.[0-9]+)?(([+-][0-9][0-9]:[0-9][0-9])|Z)?)?)?)?$"
+    },
+    "TargetGroup": {
+      "label": "TargetGroup",
+      "required": false,
+      "repeatable": true,
+      "description": "Refers to learning resource and learners: A class of agents for whom the learning resource is intended or useful.",
+      "codes": {
+        "student (school)": {},
+        "student (BA)": {},
+        "student (MA)": {},
+        "student (PhD)": {},
+        "data steward": {},
+        "teacher (school)": {},
+        "teacher (higher education)": {}
+      }
+    },
+    "RelatedWork": {
+      "label": "RelatedWork",
+      "required": false,
+      "repeatable": true,
+      "description": "The didactic relations to other learning resources: isPartOf, hasPart, or isBased on (prerequisite), isSupplementOf, isSupplementTo, isNewerVersionOf. Please provide the links of these resources.",
+      "pattern": "^(isPartOf|hasPart|isBased|isSupplementOf|isSupplementTo|isNewerVersionOf):https?://+"
+    },
+    "Size": {
+      "label": "Size",
+      "required": false,
+      "repeatable": false,
+      "description": "size of the resource in megabyte",
+      "pattern": "^[0-9]+(\\.[0-9]+)$"
+    },
+    "Version": {
+      "label": "Version",
+      "required": false,
+      "repeatable": false,
+      "description": "the version of the learning resource"
+    }
+  }
+}
