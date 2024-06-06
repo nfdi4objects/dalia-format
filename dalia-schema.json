@@ -16,6 +16,7 @@
       "required": true,
       "repeatable": false,
       "description": "an object that links to a license",
+      "codes": "https://spdx.org/licenses/",
       "pattern": "^[A-Za-z0-9.-]+$"
     },
     "Link": {
@@ -46,13 +47,15 @@
       "label": "Discipline",
       "required": false,
       "repeatable": true,
-      "description": "the discipline or university/college subject the learning resource belongs to"
+      "description": "the discipline or university/college subject the learning resource belongs to",
+      "codes": "https://w3id.org/kim/hochschulfaechersystematik/scheme"
     },
     "FileFormat": {
       "label": "FileFormat",
       "required": false,
       "repeatable": true,
-      "description": "The (technical) file format, physical medium, or dimensions of the resource. If the resource exists in different formats (e.g. pptx and pdf), all of them should be provided. For non-downloadable resources, e.g. streams, no format can be provided (e.g. YouTube videos)."
+      "description": "The (technical) file format, physical medium, or dimensions of the resource. If the resource exists in different formats (e.g. pptx and pdf), all of them should be provided. For non-downloadable resources, e.g. streams, no format can be provided (e.g. YouTube videos).",
+      "codes": "https://mimetype.io/all-types"
     },
     "Keywords": {
       "label": "Keywords",
@@ -64,7 +67,8 @@
       "label": "Language",
       "required": false,
       "repeatable": true,
-      "description": "essential and characteristic topics or content of the resource"
+      "description": "essential and characteristic topics or content of the resource",
+      "pattern": "^[a-z][a-z][a-z]?$"
     },
     "LearningResourceType ": {
       "label": "LearningResourceType",

@@ -5,7 +5,7 @@ default: valid docs
 valid: dalia-schema.json
 	avram -s $<
 
-docs: dalia-schema.html
+docs: index.html
 
 index.html: dalia-schema.json
 	avram -d html $< > $@
