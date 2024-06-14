@@ -1,6 +1,8 @@
 # DALIA Interchange Format Tests
 
-This repository contains tests and tools for the **DALIA Interchange Format** (DIF). The format and its data model are being developed within the [Data Literacy Alliance](https://dalia.education/) (DALIA).
+This repository contains tests and tools for the **DALIA Interchange Format** (DIF). The format and its data model are being developed within the [Data Literacy Alliance](https://dalia.education/) (DALIA). For reference see:
+
+- Geiger, J., Steiner, P., Desouki, A. A., & Lange, F. (2024). DALIA Interchange Format (1.3). Zenodo. https://doi.org/10.5281/zenodo.11521029
 
 ### Disclaimer
 
